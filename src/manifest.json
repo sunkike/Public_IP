@@ -19,7 +19,8 @@
             "19": "/images/icon16.png", 
 			"38": "/images/icon48.png"
         },
-      "default_title": "Info IP"      
+      "default_title": "Public IP",
+      "default_popup":"popup.html"        
     },
 	"permissions": ["tabs", "http://*/*", "https://*/*", "webRequest", "storage"],
 	"content_scripts": [{

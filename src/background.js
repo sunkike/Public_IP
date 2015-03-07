@@ -39,12 +39,17 @@ function changeIP(data) {
 	if (old_IP == "" ) {
 		old_IP = data.ip;
 	} else if (old_IP !== data.ip ) {
+	    msgIP += "From " + old_IP + " to " + data.ip + "<br/>";
 		changesCounter++;
 		chrome.browserAction.setBadgeText({text: changesCounter.toString()});
 		old_IP = data.ip;
+		chrome.browserAction.enable();
 	}
 }
 
 var old_IP = "";
 var changesCounter = 0;
+var msgIP = "";
+chrome.browserAction.disable();
+
 
